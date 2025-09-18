@@ -2,7 +2,6 @@ pipeline {
     agent any
 
     environment {
-        // Escape backslashes for Windows path
         PYTHON = "C:\\Users\\Pawan.Pawar\\AppData\\Local\\Programs\\Python\\Python313\\python.exe"
     }
 
@@ -29,7 +28,8 @@ pipeline {
             steps {
                 bat """
                     call venv\\Scripts\\activate
-                    behave -f pretty -f junit -o reports/junit_report.xml ^
+                    if not exist reports mkdir reports
+                    behave --junit --junit-directory reports ^
                         -f behave_html_formatter:HTMLFormatter -o reports/html_report.html
                 """
             }
