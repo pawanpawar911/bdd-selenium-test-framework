@@ -146,7 +146,7 @@ def step_file_too_large_error(context):
             lambda d: context.login_page.upload_file_msg()
         )
         logger.info(f"Upload error message: {error_msg}")
-        assert "too large1" in error_msg.lower(), f"Unexpected error message: {error_msg}"
+        assert "too large" in error_msg.lower(), f"Unexpected error message: {error_msg}"
     except Exception as e:
         context.login_page.save_screenshot("upload_page_file_too_large_failure")
         logger.error(f"Upload large file Step failed due to: {e}")
