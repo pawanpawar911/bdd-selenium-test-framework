@@ -1,0 +1,1 @@
+behave -f behave_html_formatter:HTMLFormatter -o reports/html_report.html .\features\application.feature
