@@ -1,66 +1,68 @@
-# bdd-selenium-test-framework
-A Behavior-Driven Development (BDD) test automation framework built using Behave and Selenium. Implements Page Object Model (POM), reusable utilities, and configuration-driven execution for scalable web UI test automation.
----
+bdd-selenium-test-framework
 
-## 📂 Project Structure
+A Behavior-Driven Development (BDD) test automation framework built using Behave and Selenium.
+Implements Page Object Model (POM), reusable utilities, and configuration-driven execution for scalable web UI test automation.
 
+📂 Project Structure
 Automation_Indee_Test/
-│── base_pages/ # Page Object Model classes
-│ ├── base_page.py
-│ ├── login_and_upload_page.py
+│── base_pages/               # Page Object Model classes
+│   ├── base_page.py
+│   ├── login_and_upload_page.py
 │
-│── configuration/ # Configuration files
-│ ├── config.ini
+│── configuration/            # Configuration files
+│   ├── config.ini
 │
-│── features/ # BDD Feature files & Step Definitions
-│ ├── application.feature
-│ ├── steps/
-│ │ ├── login_and_upload_steps.py
-│ ├── environment.py
+│── features/                 # BDD Feature files & Step Definitions
+│   ├── application.feature
+│   ├── steps/
+│   │   ├── login_and_upload_steps.py
+│   ├── environment.py
 │
-│── logs/ # Log files
-│ ├── test.log
+│── logs/                     # Log files
+│   ├── test.log
 │
-│── reports/ # Test Reports (generated after execution)
+│── reports/                  # Test Reports (generated after execution)
 │
-│── screenshots/ # Captured screenshots on failure
+│── screenshots/              # Captured screenshots on failure
 │
-│── utilities/ # Utilities & Helpers
-│ ├── customLogger.py
-│ ├── locators.py
-│ ├── read_properties.py
+│── utilities/                # Utilities & Helpers
+│   ├── customLogger.py
+│   ├── locators.py
+│   ├── read_properties.py
 │
-│── requirements.txt # Python dependencies
-│── run.bat # Batch file for running tests (Windows)
-│── README.md # Project Documentation
+│── requirements.txt          # Python dependencies
+│── run.bat                   # Batch file for running tests (Windows)
+│── README.md                 # Project Documentation
 
+⚙️ Installation & Setup
 
----
-
-## ⚙️ Installation & Setup
-
-Install dependencies
+Install dependencies:
 
 pip install -r requirements.txt
 
 🚀 Running the Tests
+
 Option 1: Using Behave directly
+
 behave features/application.feature
 
-Option 2: Run all tests and generate html report
+
+Option 2: Run all tests and generate HTML report
+
 behave -f behave_html_formatter:HTMLFormatter -o reports/html_report.html .\features\application.feature
 
+
 Option 3: Using Batch File (Windows)
-Simply run:
+
 run.bat
 
 📝 Reports & Logs
 
-Logs → Stored under logs/test.log
+Logs → stored under logs/test.log
 
-Screenshots (on failure) → Stored under screenshots/
+Screenshots (on failure) → stored under screenshots/
 
-Reports → Generated under reports/
+Reports → generated under reports/
 
 🧩 Example Feature (application.feature)
 Feature: Profile Picture Upload
