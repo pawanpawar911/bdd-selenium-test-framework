@@ -29,8 +29,19 @@ pipeline {
             steps {
                 bat """
                     call venv\\Scripts\\activate
-                    behave -f pretty -f junit -o reports
+                    behave -f pretty -f junit -o reports/junit_report.xml ^
+                        -f behave_html_formatter:HTMLFormatter -o reports/html_report.html
                 """
+            }
+        }
+
+        stage('Publish HTML Report') {
+            steps {
+                publishHTML(target: [
+                    reportDir: 'reports',
+                    reportFiles: 'html_report.html',
+                    reportName: 'BDD Test Report'
+                ])
             }
         }
 
