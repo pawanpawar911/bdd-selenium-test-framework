@@ -1,8 +1,5 @@
-# Automation Indee Test
-
-This project is an automation testing framework built using Python, Selenium, and Behave (BDD) for testing web applications.  
-It follows the Page Object Model (POM) design pattern with separation of concerns for better maintainability.
-
+# bdd-selenium-test-framework
+A Behavior-Driven Development (BDD) test automation framework built using Behave and Selenium. Implements Page Object Model (POM), reusable utilities, and configuration-driven execution for scalable web UI test automation.
 ---
 
 ## 📂 Project Structure
@@ -79,5 +76,3 @@ Feature: Profile Picture Upload
 Update config.ini with environment-specific details (URL, credentials, etc.).
 
 Logs and screenshots will help in debugging failed test cases.
-# bdd-selenium-test-framework
-A Behavior-Driven Development (BDD) test automation framework built using Behave and Selenium. Implements Page Object Model (POM), reusable utilities, and configuration-driven execution for scalable web UI test automation.
